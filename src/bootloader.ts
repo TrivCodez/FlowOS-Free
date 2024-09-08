@@ -43,7 +43,7 @@ boot.appendMany(
         src: logo,
         height: '40px'
       }),
-      new HTML('h1').text('FlowOS').styleJs({
+      new HTML('h1').text('LavaDevOS').styleJs({
         color: 'white'
       })
     ),
