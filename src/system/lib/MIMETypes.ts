@@ -28,7 +28,7 @@ const MIMETypes: Library = {
     },
     app: {
       type: 'application/x-flow-executable',
-      description: 'FlowOS Application',
+      description: 'LavaDevOS Application',
       opensWith: [],
       icon: 'deployed_code'
     },
@@ -106,7 +106,7 @@ const MIMETypes: Library = {
     },
     theme: {
       type: 'application/x-flow-theme',
-      description: 'FlowOS Theme',
+      description: 'LavaDevOS Theme',
       opensWith: ['apps/Editor'],
       icon: 'palette'
     },

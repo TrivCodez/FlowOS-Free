@@ -1,6 +1,6 @@
 import Kernel from '../../kernel'
 
-import FlowLogo from '../../assets/flow.png'
+import FlowLogo from '../../assets/lavadev.png'
 import { Library } from '../../types'
 import LibraryLib from '../../structures/LibraryLib'
 
@@ -36,7 +36,7 @@ const SplashScreen: Library = {
         src: FlowLogo,
         width: 128
       }).appendTo(div)
-      const h1 = new HTML('h1').style({ margin: '0' }).text('FlowOS').appendTo(div)
+      const h1 = new HTML('h1').style({ margin: '0' }).text('LavaDevOS').appendTo(div)
       new HTML('sup').style({ 'font-size': '0.5em' }).text(kernel.codename).appendTo(h1)
       new HTML('p').style({ margin: '0' }).text('loading...').appendTo(div)
 

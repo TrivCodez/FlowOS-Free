@@ -96,7 +96,7 @@ export const defaultFS: { root: Directory } = {
                 type: 'file',
                 deleteable: true,
                 permission: Permission.USER,
-                content: Buffer.from('# Welcome to FlowOS!')
+                content: Buffer.from('# Welcome to LavaDevOS!')
               },
               'Info.lnk': {
                 type: 'file',

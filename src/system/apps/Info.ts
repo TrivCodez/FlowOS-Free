@@ -34,7 +34,7 @@ const Info: Process = {
       .appendMany(
         new HTML('h1').style({
           margin: '0'
-        }).text('FlowOS')
+        }).text('LavaDevOS')
           .append(new HTML('sup').text(`${process.sysInfo.codename}`).style({
             'font-size': '0.5em'
           })),
@@ -43,7 +43,7 @@ const Info: Process = {
         }).text(`v${String(process.sysInfo.version)}`),
         new HTML('br'),
         new HTML('a').attr({
-          href: 'https://discord.gg/nj93ywpyRy'
+          href: 'https://discord.gg/eymmr2DA'
         }).append(
           new HTML('img').attr({
             src: badge,
@@ -52,14 +52,13 @@ const Info: Process = {
         ),
         new HTML('br'),
         new HTML('a').text('Discord').attr({
-          href: 'https://discord.gg/86F8dK9vfn',
+          href: 'https://discord.gg/eymmr2DA',
           class: 'discord'
         }),
         new HTML('span').text(' - '),
-        new HTML('a').text('Github').attr({
-          href: 'https://github.com/Flow-Works/FlowOS',
-          class: 'github'
-        })
+   //     //  href: 'https://github.com/Flow-Works/FlowOS',
+        //  class: 'github'
+       // })
       )
   }
 }

@@ -6,7 +6,7 @@
 import Kernel, { spaces } from './kernel'
 import HTML from './HTML'
 
-import logo from './assets/flow.png'
+import logo from './assets/lavadev.png'
 
 const body = new HTML(document.body)
 
@@ -117,14 +117,14 @@ try {
   const args = new URLSearchParams(window.location.search)
   const kernel = new Kernel()
   writeln('/-----------------------------------------------\\')
-  writeln('| FlowOS is now discontinued. Starting in 10s...|')
+  writeln('| LavaDevOS is starting in 10s...|')
   writeln('\\-----------------------------------------------/')
   setTimeout(() => {
     kernel.boot(boot, progress, args).catch(e => console.error(e))
   }, 10000)
 } catch (e) {
   writeln()
-  writeln('An error occured while booting FlowOS.')
+  writeln('An error occured while booting LavaDevOS.')
   writeln('Please report this error to Flow Works.')
   writeln()
   console.error(e.stack)

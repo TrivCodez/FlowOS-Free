@@ -70,7 +70,7 @@ export default class Kernel {
   async boot (boot: HTML, progress: HTML, args: URLSearchParams): Promise<void> {
     progress.style({ width: '0%' })
     const bootArgs = args.toString().replace(/=($|&)/g, '=true ')
-    console.log(`FlowOS - v${pkg.version}, Flow Works (c) ${new Date().getFullYear()}`)
+    console.log(`LavaDevOS - v${pkg.version}, OS Works (c) ${new Date().getFullYear()}`)
     console.log()
     console.log(`User Agent : ${navigator.userAgent}`)
     console.log(`Boot Args  : ${bootArgs === '' ? 'None' : bootArgs}`)
@@ -81,7 +81,7 @@ export default class Kernel {
     this.fs = await handle('target', 'Virtual File Systems', VirtualFS)
     if (this.fs === false) return
     else progress.style({ width: '20%' })
-    this.config = await handle('target', 'FlowOS Configuration', {
+    this.config = await handle('target', 'LavaDevOS Configuration', {
       init: async () => {
         if (this.fs === false) return
         return parse(Buffer.from(await this.fs.readFile('/etc/flow')).toString()) as any
@@ -129,7 +129,7 @@ export default class Kernel {
                 .then(async () => {
                   if (this.fs === false) return
                   console.log()
-                  console.log('Welcome to FlowOS!')
+                  console.log('Welcome to LavaDevOS!')
                   console.log()
                   progress.style({ width: '100%' })
                   setTimeout(() => {
@@ -158,7 +158,7 @@ export default class Kernel {
       executable = importedExecutable.default
     }
 
-    if (semver.gt(executable.config.targetVer, this.version)) throw new Error(`Executable requires a newer version of FlowOS: ${executable.config.targetVer}`)
+    if (semver.gt(executable.config.targetVer, this.version)) throw new Error(`Executable requires a newer version of LavaDevPS: ${executable.config.targetVer}`)
     if (executable === undefined) throw new Error(`No default export found for package: ${url}.`)
 
     if (this.packageList[executable.config.name] === undefined) this.packageList[executable.config.name] = { url, executable }
@@ -202,7 +202,7 @@ export default class Kernel {
       executable = importedExecutable.default
     }
 
-    if (semver.gt(executable.config.targetVer, this.version)) throw new Error(`Executable requires a newer version of FlowOS: ${executable.config.targetVer}`)
+    if (semver.gt(executable.config.targetVer, this.version)) throw new Error(`Executable requires a newer version of LavaDevOS: ${executable.config.targetVer}`)
     if (executable === undefined) throw new Error(`No default export found for package: ${url}.`)
 
     if (this.packageList[executable.config.name] === undefined) this.packageList[executable.config.name] = { url, executable }

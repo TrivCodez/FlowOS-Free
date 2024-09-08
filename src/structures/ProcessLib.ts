@@ -73,7 +73,7 @@ export default class ProcessLib {
       executable = importedExecutable.default
     }
 
-    if (semver.gt(executable.config.targetVer, this.sysInfo.version)) throw new Error(`Executable requires a newer version of FlowOS: ${executable.config.targetVer}`)
+    if (semver.gt(executable.config.targetVer, this.sysInfo.version)) throw new Error(`Executable requires a newer version of LavaDevOS: ${executable.config.targetVer}`)
     if (executable === undefined) throw new Error(`No default export found for package: ${url}.`)
 
     if (this._kernel.packageList[executable.config.name] === undefined) this._kernel.packageList[executable.config.name] = { url, executable }
